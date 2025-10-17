@@ -2,6 +2,7 @@ import redis
 import json
 from datetime import datetime
 from worker import worker  # import your existing worker(url) function
+from data.data_utils import load_db_as_pandas
 
 # Connect to Redis
 r = redis.StrictRedis(host='localhost', port=6379, db=0, decode_responses=True)
@@ -27,7 +28,8 @@ def process_jobs():
             EMBED_DIM = 384  # for sentence-transformers/all-MiniLM-L12-v2
 
             worker_output = worker(FAISS_FILE, EMBED_DIM, url)
-
+            urls, chunks = load_db_as_pandas()
+            breakpoint()
             # Update status
             job_data["status"] = "completed"
             job_data["completed_at"] = datetime.utcnow().isoformat()

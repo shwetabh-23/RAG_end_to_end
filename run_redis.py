@@ -28,7 +28,6 @@ if __name__ == "__main__":
         "https://medium.com/@explorer_shwetabh/understanding-multimodal-large-language-models-mllms-7194e8a373b3", 
         "https://medium.com/@explorer_shwetabh/multi-agentic-rag-system-for-jamming-sessions-d4d592db35aa" , 
         "https://medium.com/@explorer_shwetabh/trying-to-learn-what-they-see-part-1-2a3ff94b58de"
-       
     ]
 
     for url in urls:
