@@ -1,4 +1,4 @@
-# 🧠 Scalable Web-Aware RAG Engine
+# 🧠 RAG Engine End-to-End
 
 This project implements a **Retrieval-Augmented Generation (RAG) engine** that asynchronously ingests web content and allows users to query that ingested knowledge for grounded, fact-based answers.
 
@@ -52,12 +52,7 @@ This project implements a **Retrieval-Augmented Generation (RAG) engine** that a
 
 ---
 
-## 🧠 API Endpoints
-
-### `POST /ingest-url`
-Submit one or more URLs for ingestion.
-
-🧩 Workflow
+## Workflow
 
 POST /ingest-url → Adds URLs to Redis queue.
 
@@ -65,17 +60,17 @@ Worker → Fetches content, cleans it, chunks it, embeds it, and stores it in FA
 
 POST /query → Embeds the query, retrieves relevant chunks, and generates a grounded answer.
 
-🧰 Setup
-# 1. Clone the repository
+## Setup
+### 1. Clone the repository
 git clone https://github.com/shwetabh-23/RAG_end_to_end.git
 cd RAG_end_to_end
 
-# 2. Create virtual environment
+### 2. Create virtual environment
 python -m venv venv
 source venv/bin/activate   # or venv\Scripts\activate on Windows
 
-# 3. Install dependencies
+### 3. Install dependencies
 pip install -r requirements.txt
 
-# 4. Create environment file
+### 4. Create environment file
 cp .env.example .env
