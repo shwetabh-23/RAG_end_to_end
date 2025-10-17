@@ -1,0 +1,14 @@
+beautifulsoup4
+requests
+langchain
+sentence-transformers
+faiss-cpu
+pandas
+transformers
+torch
+torchvision
+bitsandbytes
+accelerate
+redis
+uvicorn
+fastapi
